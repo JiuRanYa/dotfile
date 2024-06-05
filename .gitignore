@@ -6,7 +6,7 @@
 
 !.config/kitty
 !.config/kitty/*
-!.config/alacritty.toml
+
 !.config/alacritty
 !.config/alacritty/*
 !.config/alacritty/**/*
