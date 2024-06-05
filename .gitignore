@@ -4,6 +4,9 @@
 !.config/nvim/*
 !.config/nvim/**/*
 
+!.config/kitty
+!.config/kitty/*
+
 !.gitignore
 !.zshrc
 !.tmux.conf
