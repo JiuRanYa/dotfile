@@ -1,0 +1,17 @@
+# [font]
+# normal = ["Fira Code"]
+# size = 16
+
+
+width = 1
+fork = false
+frame = "buttonless"
+idle = true
+maximized = false
+no-multigrid = false
+srgb = false
+tabs = true
+theme = "auto"
+title-hidden = true
+vsync = true
+wsl = false

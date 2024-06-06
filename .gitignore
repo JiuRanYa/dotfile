@@ -11,6 +11,10 @@
 !.config/alacritty/*
 !.config/alacritty/**/*
 
+!.config/neovide
+!.config/neovide/*
+!.config/neovide/**/*
+
 !.gitignore
 !.zshrc
 !.tmux.conf
