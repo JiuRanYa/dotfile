@@ -1,7 +1,6 @@
-# [font]
-# normal = ["Fira Code"]
-# size = 16
-
+[font]
+  normal = ["Fira Code"]
+  size = 16
 
 width = 1
 fork = false
