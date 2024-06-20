@@ -15,6 +15,14 @@
 !.config/neovide/*
 !.config/neovide/**/*
 
+!.config/yabai
+!.config/yabai/*
+!.config/yabai/**/*
+
+!.config/skhd
+!.config/skhd/*
+!.config/skhd/**/*
+
 !.gitignore
 !.zshrc
 !.tmux.conf
