@@ -7,7 +7,8 @@ cmd - h : yabai -m window --focus west
 cmd - l : yabai -m window --focus east
 
 cmd - m : yabai -m window --minimize
-cmd - f : yabai -m window --focus mouse && \
+
+shift + cmd - f : yabai -m window --focus mouse && \
           yabai -m window --toggle zoom-fullscreen
 
 shift + cmd - h : yabai -m window --resize left:-20:0 ; yabai -m window --resize right:-20:0

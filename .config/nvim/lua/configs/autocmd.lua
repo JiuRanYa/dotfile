@@ -20,6 +20,7 @@ vim.g.vsnip_filetypes = {
 	typescript = { "javascript", "typescript", "typescriptreact" },
 }
 --
+---@diagnostic disable-next-line: lowercase-global
 function open_folder_in_finder()
 	local api = require("nvim-tree.api")
 	local node = api.tree.get_node_under_cursor()
