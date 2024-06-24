@@ -3,6 +3,7 @@ local on_attach = require("override.lspconfig").on_attach
 local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
+---@diagnostic disable-next-line: different-requires
 local lspconfig = require("lspconfig")
 local mason_registry = require("mason-registry")
 local util = require("lspconfig.util")
