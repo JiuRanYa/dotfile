@@ -27,6 +27,15 @@ return {
           ['<C-b>'] = cmp.mapping.scroll_docs(-4),
           ['<C-e>'] = cmp.mapping.abort(),
           ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+
+					["<C-k>"] = cmp.mapping.select_prev_item(),
+					-- 下一个
+					["<C-j>"] = cmp.mapping.select_next_item(),
+					-- abort
+					["<C-c>"] = cmp.mapping.abort(),
+					["<C-d>"] = cmp.mapping.scroll_docs(-4),
+					["<C-f>"] = cmp.mapping.scroll_docs(4),
+					["<C-Space>"] = cmp.mapping.complete(),
         }),
 
 				sources = {
@@ -38,14 +47,6 @@ return {
 					{ name = "nvim_lsp_signature_help" },
 					{ name = "nvim_lua" },
 					{ name = "vsnip" },
-					["<C-k>"] = cmp.mapping.select_prev_item(),
-					-- 下一个
-					["<C-j>"] = cmp.mapping.select_next_item(),
-					-- abort
-					["<C-c>"] = cmp.mapping.abort(),
-					["<C-d>"] = cmp.mapping.scroll_docs(-4),
-					["<C-f>"] = cmp.mapping.scroll_docs(4),
-					["<C-Space>"] = cmp.mapping.complete(),
         }
       })
 
