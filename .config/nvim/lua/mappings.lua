@@ -1,14 +1,11 @@
 require("nvchad.mappings")
 local conform = require("conform")
 
--- add yours here
-
 local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 local keymap = vim.keymap.set
 
 local hop = require("hop")
@@ -31,7 +28,7 @@ keymap("n", "<leader>sf", function()
 end, { desc = "Spelling Suggestions" })
 
 -- 刷新lua配置
-map("n", "<leader>rs", ":luafile ~/.config/nvim/init.lua<CR>", { noremap = true })
+-- map("n", "<leader>rs", ":luafile ~/.config/nvim/init.lua<CR>", { noremap = true })
 
 map("n", ";", ":noh<CR>")
 -- nvim-tree
@@ -73,9 +70,6 @@ map("n", "<C-s>", ":w<CR>", opt)
 -- lazy git
 vim.api.nvim_set_keymap("n", "<leader>g", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
 
--- lspsaga
--- keymap("n", "[E", function() require("lspsaga.diagnostic").goto_prev({ severity = vim.diagnostic.severity.ERROR }) end, { silent = true })
--- keymap("n", "]E", function() require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR }) end, { silent = true })
 keymap("n", "<leader>O", ":Lspsaga outline<CR>")
 keymap("n", "K", ":Lspsaga hover_doc<CR>", { silent = true })
 keymap({ "n", "v" }, "<leader>ca", ":Lspsaga code_action<CR>", { silent = true })
