@@ -33,3 +33,4 @@ end
 
 -- 将该函数映射到一个合适的按键，例如 F2
 vim.api.nvim_set_keymap("n", "<leader>of", ":lua open_folder_in_finder()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "d", "\"_d", { noremap = true, silent = true })
