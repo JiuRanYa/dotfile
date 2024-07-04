@@ -3,14 +3,11 @@ return {
     'windwp/nvim-autopairs',
     event = "InsertEnter",
     config = true
-    -- use opts = {} for passing setup options
-    -- this is equalent to setup({}) function
   },
   {
     'phaazon/hop.nvim',
-    branch = 'v2', -- optional but strongly recommended
+    branch = 'v2',
     config = function()
-      -- you can configure Hop the way you like here; see :h hop-config
       require 'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
     end
   },
@@ -19,7 +16,7 @@ return {
     event = "VeryLazy",
     config = function()
       require("auto-save").setup({
-        enabled = true, -- start auto-save when the plugin is loaded (i.e. when your package manager loads it)
+        enabled = true,
         debounce_delay = 200,
       })
     end,
@@ -36,9 +33,6 @@ return {
     "windwp/nvim-ts-autotag",
     dependencies = "nvim-treesitter/nvim-treesitter",
     event = "VeryLazy",
-    config = function()
-      require("nvim-ts-autotag").setup()
-    end,
   },
   {
     "iamcco/markdown-preview.nvim",

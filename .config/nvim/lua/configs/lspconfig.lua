@@ -3,7 +3,6 @@ local on_attach = require("override.lspconfig").on_attach
 local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
----@diagnostic disable-next-line: different-requires
 local lspconfig = require("lspconfig")
 local mason_registry = require("mason-registry")
 local util = require("lspconfig.util")
@@ -13,10 +12,8 @@ local vue_language_server_path = mason_registry.get_package("vue-language-server
 local servers = { "html", "cssls", "volar", "eslint", "tailwindcss" }
 
 local function get_typescript_server_path(root_dir)
-	-- local global_ts = "/home/[yourusernamehere]/.npm/lib/node_modules/typescript/lib"
 	local global_ts = "/Users/jiuran/.config/nvm/versions/node/v20.11.1/lib/node_modules/typescript/lib"
-	-- Alternative location if installed as root:
-	-- local global_ts = '/usr/local/lib/node_modules/typescript/lib'
+
 	local found_ts = ""
 	local function check_dir(path)
 		found_ts = util.path.join(path, "node_modules", "typescript", "lib")

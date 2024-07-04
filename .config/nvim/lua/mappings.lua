@@ -92,7 +92,6 @@ keymap("n", "<C-s>", ":EslintFixAll<CR>")
 map("i", "<C-l>", "<RIGHT>")
 map("i", "<C-h>", "<LEFT>")
 
--- close tab for buffer line
 keymap({ "n", "v" }, "<leader>cb", ":bdelet<CR>")
 
 -- motion with hop

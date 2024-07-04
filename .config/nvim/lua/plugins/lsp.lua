@@ -45,11 +45,8 @@ return {
 			ensure_installed = {
 				"lua-language-server",
 				"vue-language-server",
-				"eslint-lsp",
-				"tailwindcss",
-				"prettierd",
+				"tailwindcss-language-server",
 				"html-lsp",
-				"stylua",
 			},
 		},
 		config = function()
