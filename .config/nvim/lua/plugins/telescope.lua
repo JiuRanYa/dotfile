@@ -21,21 +21,6 @@ return {
           end,
         },
       },
-      extensions = {
-        import = {
-          -- Add imports to the top of the file keeping the cursor in place
-          insert_at_top = false,
-          -- Support additional languages
-        },
-      },
     },
   },
-  -- Lazy
-  {
-    'piersolenski/telescope-import.nvim',
-    dependencies = 'nvim-telescope/telescope.nvim',
-    config = function()
-      require("telescope").load_extension("import")
-    end
-  }
 }
