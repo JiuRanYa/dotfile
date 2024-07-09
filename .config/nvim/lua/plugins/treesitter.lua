@@ -1,7 +1,8 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    event = "VeryLazy",
+    event = { "BufReadPost", "BufNewFile" },
+    lazy = false,
     dependencies = {
       "windwp/nvim-ts-autotag"
     },
@@ -24,9 +25,9 @@ return {
             ["as"] = { query = "@scope", query_group = "locals", desc = "Select language scope" },
           },
           selection_modes = {
-            ['@parameter.outer'] = 'v',   -- charwise
-            ['@function.outer'] = 'V',    -- linewise
-            ['@class.outer'] = '<c-v>',   -- blockwise
+            ['@parameter.outer'] = 'v', -- charwise
+            ['@function.outer'] = 'V',  -- linewise
+            ['@class.outer'] = '<c-v>', -- blockwise
           },
           include_surrounding_whitespace = true,
         },
@@ -36,5 +37,5 @@ return {
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
     lazy = false
-  }
+  },
 }
