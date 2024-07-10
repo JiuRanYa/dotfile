@@ -1,7 +1,6 @@
 return {
   {
     "hrsh7th/nvim-cmp",
-    lazy = false,
     opts = function()
       local cmp = require("cmp")
 
@@ -10,18 +9,9 @@ return {
 
       cmp.setup({
         snippet = {
-          -- REQUIRED - you must specify a snippet engine
           expand = function(args)
             vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-            -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-            -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-            -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
-            -- vim.snippet.expand(args.body) -- For native neovim snippets (Neovim v0.10+)
           end,
-        },
-        window = {
-          -- completion = cmp.config.window.bordered(),
-          -- documentation = cmp.config.window.bordered(),
         },
         mapping = cmp.mapping.preset.insert({
           ['<C-b>'] = cmp.mapping.scroll_docs(-4),
@@ -58,7 +48,6 @@ return {
               style_sheets = {
                 -- example of remote styles, only css no js for now
                 "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css",
-                "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css",
               }
             }
           },
@@ -83,13 +72,6 @@ return {
         }),
         matching = { disallow_symbol_nonprefix_matching = false }
       })
-
-      -- Set up lspconfig.
-      local capabilities = require('cmp_nvim_lsp').default_capabilities()
-      -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-      require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
-        capabilities = capabilities
-      }
     end,
     dependencies = {
       "hrsh7th/cmp-nvim-lsp",
@@ -102,15 +84,15 @@ return {
       "rafamadriz/friendly-snippets",
     },
   },
-  {
-    "Jezda1337/nvim-html-css",
-    event = { "BufReadPost", "BufNewFile" },
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "nvim-lua/plenary.nvim"
-    },
-    config = function()
-      require("html-css"):setup()
-    end
-  }
+  -- {
+  --   "Jezda1337/nvim-html-css",
+  --   event = { "BufReadPost", "BufNewFile" },
+  --   dependencies = {
+  --     "nvim-treesitter/nvim-treesitter",
+  --     "nvim-lua/plenary.nvim"
+  --   },
+  --   config = function()
+  --     require("html-css"):setup()
+  --   end
+  -- }
 }
