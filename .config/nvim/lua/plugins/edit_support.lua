@@ -2,7 +2,6 @@ return {
   {
     'windwp/nvim-autopairs',
     event = "InsertEnter",
-    config = true
   },
   {
     'phaazon/hop.nvim',
@@ -13,7 +12,7 @@ return {
   },
   {
     "Pocco81/auto-save.nvim",
-    event = "VeryLazy",
+    event = "InsertEnter",
     config = function()
       require("auto-save").setup({
         enabled = true,
