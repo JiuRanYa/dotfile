@@ -38,6 +38,7 @@ map("n", "<C-f>", ":NvimTreeFindFile<CR>", {}) -- open/close
 -- buffer line 切换
 map("n", "<S-h>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<S-l>", ":BufferLineCycleNext<CR>", opt)
+map("n", "<leader>y", "<cmd>YankBank<CR>", { noremap = true })
 
 -- 关闭当前缓冲区
 map("n", "<leader>bd", ":BufferLineClose<CR>", opt)
