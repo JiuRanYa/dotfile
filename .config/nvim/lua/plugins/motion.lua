@@ -5,7 +5,6 @@ return {
   },
 {
     "ptdewey/yankbank-nvim",
-    event = "VeryLazy",
     config = function()
         require('yankbank').setup()
     end,
