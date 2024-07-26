@@ -5,9 +5,6 @@ return {
     opts = function()
       local cmp = require("cmp")
 
-      local cmp_autopairs = require("nvim-autopairs.completion.cmp")
-      cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
-
       cmp.setup({
         snippet = {
           expand = function(args)
@@ -30,28 +27,14 @@ return {
         }),
 
         sources = {
-          { name = "luasnip",                priority = 60 },
-          { name = "nvim_lsp",               priority = 90 },
+          { name = "luasnip",                priority = 90 },
+          { name = "nvim_lsp",               priority = 80 },
           -- { name = "cmp_tabnine", priority = 98, max_item_count = 2, keyword_length = 3 },
-          { name = "buffer",                 priority = 80 },
-          { name = "path",                   priority = 80 },
+          { name = "buffer",                 priority = 70 },
+          { name = "path",                   priority = 60 },
           { name = "nvim_lsp_signature_help" },
           { name = "nvim_lua" },
           { name = "vsnip" },
-          {
-            name = "html-css",
-            option = {
-              enable_on = {
-                "html",
-                "vue"
-              },                                           -- set the file types you want the plugin to work on
-              file_extensions = { "css", "sass", "less" }, -- set the local filetypes from which you want to derive classes
-              style_sheets = {
-                -- example of remote styles, only css no js for now
-                "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css",
-              }
-            }
-          },
         }
       })
 
@@ -85,15 +68,4 @@ return {
       "rafamadriz/friendly-snippets",
     },
   },
-  -- {
-  --   "Jezda1337/nvim-html-css",
-  --   event = { "BufReadPost", "BufNewFile" },
-  --   dependencies = {
-  --     "nvim-treesitter/nvim-treesitter",
-  --     "nvim-lua/plenary.nvim"
-  --   },
-  --   config = function()
-  --     require("html-css"):setup()
-  --   end
-  -- }
 }
