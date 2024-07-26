@@ -1,3 +1,3 @@
 return {
-  { 'echasnovski/mini.ai',      version = '*' },
+  { 'echasnovski/mini.ai', version = '*' },
 }
