@@ -83,7 +83,7 @@ lspconfig.eslint.setup({
 	on_attach = function(client, bufnr) end,
 })
 
-lspconfig.tsserver.setup({
+lspconfig.ts_ls.setup({
 	filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" },
 	init_options = {
 		plugins = {
