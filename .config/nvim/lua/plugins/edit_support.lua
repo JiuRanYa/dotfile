@@ -1,9 +1,5 @@
 return {
   {
-    'windwp/nvim-autopairs',
-    event = "InsertEnter",
-  },
-  {
     'phaazon/hop.nvim',
     branch = 'v2',
     config = function()

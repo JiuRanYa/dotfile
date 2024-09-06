@@ -12,7 +12,7 @@ local vue_language_server_path = mason_registry.get_package("vue-language-server
 local servers = { "html", "cssls", "volar", "eslint", "tailwindcss" }
 
 local function get_typescript_server_path(root_dir)
-	local global_ts = "/Users/jiuran/.config/nvm/versions/node/v20.11.1/lib/node_modules/typescript/lib"
+	local global_ts = "/Users/jiuran/.config/nvm/versions/node/v20.14.0/lib/node_modules/typescript/lib"
 
 	local found_ts = ""
 	local function check_dir(path)
