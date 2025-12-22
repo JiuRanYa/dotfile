@@ -5,7 +5,7 @@ return {
     cmd = "Telescope",
     keys = {
       { "<Leader>f",  "<cmd>Telescope find_files hidden=true<CR>", {} },
-      { "<Leader>o",  ":Telescope lsp_document_symbols<CR>",       {} },
+      { "<Leader>o",  ":Telescope lsp_dynamic_workspace_symbols<CR>",       {} },
       { "<Leader>rs", ":Telescope resume<CR>",                     {} },
       { "<C-q>",      ":Telescope oldfiles<CR>",                   {} },
       { "fi",         ":Telescope import<CR>",                     {} },
