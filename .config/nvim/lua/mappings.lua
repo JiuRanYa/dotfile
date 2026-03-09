@@ -71,6 +71,11 @@ map("n", "<C-s>", ":w<CR>", opt)
 -- lazy git
 vim.api.nvim_set_keymap("n", "<leader>g", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
 
+-- terminal
+vim.api.nvim_set_keymap("n", "<leader>t", "<cmd>lua _float_term_toggle()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>th", "<cmd>lua _horizontal_term_toggle()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>tv", "<cmd>lua _vertical_term_toggle()<CR>", { noremap = true, silent = true })
+
 keymap("n", "<leader>O", ":Lspsaga outline<CR>")
 keymap("n", "K", ":Lspsaga hover_doc<CR>", { silent = true })
 keymap({ "n", "v" }, "<leader>ca", ":Lspsaga code_action<CR>", { silent = true })
