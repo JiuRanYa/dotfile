@@ -109,10 +109,11 @@ return {
 				vertical_term:toggle()
 			end
 
-			-- 终端模式快捷键: 用 <Esc> 退出终端模式回到 normal mode
+			-- 终端模式快捷键
 			function _set_terminal_keymaps()
 				local opts = { buffer = 0, noremap = true, silent = true }
-				vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], opts)
+				-- NOTE: 不再映射 <Esc>，避免与 opencode 等 TUI 程序的 Esc 键冲突
+				-- 如需退出终端模式回到 normal mode，可使用 <C-\><C-n>
 				vim.keymap.set("t", "<C-h>", [[<Cmd>wincmd h<CR>]], opts)
 				vim.keymap.set("t", "<C-j>", [[<Cmd>wincmd j<CR>]], opts)
 				vim.keymap.set("t", "<C-k>", [[<Cmd>wincmd k<CR>]], opts)
