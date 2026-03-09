@@ -132,3 +132,13 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
+
+# OpenClaw Completion
+source "/Users/mac/.openclaw/completions/openclaw.zsh"
+
+# opencode
+export PATH=/Users/mac/.opencode/bin:$PATH

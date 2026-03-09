@@ -9,6 +9,10 @@ return {
     opts = {
       ensure_installed = { "javascript", "html", "json", "vue", "typescript" },
       indent = { enable = true },
+      highlight = {
+          enable = true,
+          disable = { "text", "help" }, -- Add "text" and optionally "help" here
+      },
       textobjects = {
         select = {
           enable = true,

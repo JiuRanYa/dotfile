@@ -78,7 +78,7 @@ keymap("n", "rn", ":Lspsaga rename<CR>", { silent = true })
 keymap("n", "gd", ":Lspsaga peek_definition<CR>", { silent = true })
 keymap("n", "fd", ":Lspsaga finder<CR>", { silent = true })
 keymap("n", "gf", ":Lspsaga goto_definition<CR>", { silent = true })
-keymap("n", "<leader>cd", ":Lspsaga show_line_diagnostics<CR>", { silent = true })
+keymap("n", "<leader>cd", '<cmd>lua vim.diagnostic.open_float(0, {scope="line"})<CR>', { silent = true })
 keymap("n", "<leader>,", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { silent = true })
 keymap("n", "<leader>.", "<cmd>Lspsaga diagnostic_jump_next<CR>", { silent = true })
 
